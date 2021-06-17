@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Componente from './components/Componente';
 import Propiedades from './components/Propiedades';
+import Estado from './components/Estado';
+import RenderizadoCondicional from './components/RenderizadoCondicional';
+import RenderizadoElementos from './components/RenderizadoElementos';
 
 function App() {
   return (
@@ -35,6 +38,13 @@ function App() {
           funcion={num => num*num}
           ComponenteReact={<Componente msg="Componente pasado como prop"/>}
         />
+        <hr/>
+        <Estado/>
+        <hr/>
+        <RenderizadoCondicional/>
+        <hr/>
+        <RenderizadoElementos/>
+        <hr/>
       </section>
     </div>
   );

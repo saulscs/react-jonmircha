@@ -4,7 +4,7 @@ import React from 'react';
 
 function Componente(props){
     return(
-        <h3>{props.msg}</h3>
+        <h2 style={{color:'red'}}>{props.msg}</h2>
     )
 }
 
