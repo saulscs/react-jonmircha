@@ -1,3 +1,4 @@
 # Referencias
-https://jonmircha.com/react
+
+Link blog -> https://jonmircha.com/react
 
