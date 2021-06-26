@@ -65,19 +65,19 @@ export  class EventosES7 extends React.Component {
   }
 }
 
-// function Boton(props){
-//   return (<button onClick={props.myOnClick}>Boton hecho componente</button>)
-// }
+function Boton(props){
+  return (<button onClick={props.myOnClick}>Boton hecho componente</button>)
+}
 
-//Arrow function tiene el return implicito
+// Arrow function tiene el return implicito
 // const Boton = (props) => {
 //   <button onClick={props.myOnClick}>Boton hecho componente</button>
 // }
 
 //Destrucuturado ya no necesitamos el props
-const Boton = ({myOnClick}) => {
-  <button onClick={myOnClick}>Boton hecho componente</button>
-}
+// const Boton = ({myOnClick}) => {
+//   <button onClick={myOnClick}>Boton hecho componente</button>
+// }
 
 
 
