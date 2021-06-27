@@ -29,7 +29,7 @@ export default function ScrollHooks () {
 
   return (
     <>
-      <h2>Hooks - useEffet y el ciclo de vida </h2>
+      <h2 className="title">Hooks - useEffet y el ciclo de vida </h2>
       <p>Scroll Y del navegador {scrollY}px</p>
     </>
   )
