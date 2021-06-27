@@ -23,7 +23,7 @@ export class EventosES6 extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ color: "red" }}>Eventos en componentes de clase en ES6</h2>
+        <h2 className="title">Eventos en componentes de clase en ES6</h2>
         <nav>
           <button onClick={() => this.sumar()}>+</button>
           <button onClick={() => this.restar()}>-</button>
@@ -53,7 +53,7 @@ export class EventosES7 extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ color: "red" }}>Eventos en componentes de clase en ES7</h2>
+        <h2 className="title">Eventos en componentes de clase en ES7</h2>
         <nav>
           <button onClick={this.sumar}>+</button>
           <button onClick={this.restar}>-</button>

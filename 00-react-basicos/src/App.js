@@ -8,7 +8,8 @@ import RenderizadoElementos from "./components/RenderizadoElementos";
 import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos";
 import ComunicacionComponentes from "./components/ComunicacionComponentes";
 import CicloDeVida from "./components/CicloVida";
-import AjaxApi from './components/AjaxApis';
+import AjaxApi from "./components/AjaxApis";
+import ContadorHooks from "./components/ContadorHooks";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         <hr />
         <AjaxApi />
         <hr />
+        <ContadorHooks />
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 //Componente de funcion declarada
 
 function Componente(props) {
-  return <h2 style={{ color: "red" }}>{props.msg}</h2>;
+  return <h2 className="title">{props.msg}</h2>;
 }
 
 //Componente de clase

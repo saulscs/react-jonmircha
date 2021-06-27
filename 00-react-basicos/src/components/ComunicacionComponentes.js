@@ -5,16 +5,16 @@ export default class Padre extends Component {
     contador: 0,
   };
 
-  incrementarContador = (e) =>  {
+  incrementarContador = (e) => {
     this.setState({
       contador: this.state.contador + 1,
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <>
-        <h2 style={{ color: "red" }}>Comunicacion entre componentes</h2>
+        <h2 className="title">Comunicacion entre componentes</h2>
         <Hijo
           incrementarContador={this.incrementarContador}
           mensaje="mensaje para el hijo 1"

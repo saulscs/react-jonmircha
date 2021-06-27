@@ -24,7 +24,7 @@ export default class Estado extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ color: "red" }}>El estado</h2>
+        <h2 className="title">El estado</h2>
         <EstadoHijo contadorHijo={this.state.contador} />
       </div>
     );

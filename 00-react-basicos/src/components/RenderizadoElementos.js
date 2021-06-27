@@ -21,7 +21,7 @@ export default class RenderizadoElementos extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ color: "red" }}>Renderizado de elementos</h2>
+        <h2 className="title">Renderizado de elementos</h2>
         {this.state.season.map((el) => (
           <li key={el}>{el}</li>
         ))}
