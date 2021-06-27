@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-function Reloj({hora}){
-  return <h3>{hora}</h3>
+function Reloj({ hora }) {
+  return <h3>{hora}</h3>;
 }
 
-export default function RelojHooks(){
+export default function RelojHooks() {
   const [hora, setHora] = useState(new Date().toLocaleDateString());
   const [visible, setVisible] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     let temporizador;
 
-    if(visible){
-      temporizador = setInterval(()=> {
-        setHora(new Date().toLocaleDateString())
-      },1000);
+    if (visible) {
+      temporizador = setInterval(() => {
+        setHora(new Date().toLocaleDateString());
+      }, 1000);
     } else {
       clearInterval(temporizador);
     }
@@ -22,16 +22,15 @@ export default function RelojHooks(){
     return () => {
       //console.log('Fase de desmotaje');
       clearInterval(temporizador);
-    }
-  },[visible]);
+    };
+  }, [visible]);
 
-
-  return(
+  return (
     <>
       <h2 className="title">Reloj con hooks</h2>
-      {visible && <Reloj hora = {hora} /> }
+      {visible && <Reloj hora={hora} />}
       <button onClick={() => setVisible(true)}>Iniciar</button>
       <button onClick={() => setVisible(false)}>Detener</button>
     </>
-  )
+  );
 }
