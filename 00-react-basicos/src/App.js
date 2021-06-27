@@ -13,6 +13,7 @@ import ContadorHooks from "./components/ContadorHooks";
 import ScrollHooks from "./components/ScrollHook";
 import RelojHooks from "./components/RelojHooks";
 import AjaxHooks from "./components/AjaxHooks";
+import HooksPerzonalidos from "./components/HooksPersonalizados";
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
         <hr />
         <AjaxHooks />
         <hr />
+        <HooksPerzonalidos />
       </section>
     </div>
   );
