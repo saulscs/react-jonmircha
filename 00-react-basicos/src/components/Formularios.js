@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // export default function Formularios(){
 //   const [nombre, setNombre] = useState("");
@@ -68,8 +68,7 @@ import React, { useState } from 'react';
 //   )
 // }
 
-
-export default function Formularios(){
+export default function Formularios() {
   const [form, setForm] = useState({});
 
   const handleChange = (e) => {
@@ -86,11 +85,10 @@ export default function Formularios(){
     });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("El formulario se ha enviado");
-  }
+  };
   return (
     <>
       <h2 className="title">Formularios</h2>
@@ -98,53 +96,56 @@ export default function Formularios(){
         <label htmlFor="">Nombre: </label>
         <input
           type="text"
-          id ="nombre"
+          id="nombre"
           name="nombre"
           value={form.nombre}
-          onChange = {handleChange}/>
-          <p>Elige tu sabor JS favorito</p>
-          <input
-            type="radio"
-            id="vanilla"
-            name="sabor"
-            value="vanilla"
-            defaultChecked
-            onChange={handleChange}/>
-          <label htmlFor="">Vanilla</label>
-          <input
-            type="radio"
-            id="React"
-            name="sabor"
-            value="React"
-            onChange={handleChange}/>
-          <label htmlFor="">React</label>
-          <input
-            type="radio"
-            id="Angular"
-            name="sabor"
-            value="Angular"
-            onChange={handleChange}/>
-          <label htmlFor="">Angular</label>
-          <select
-            name="lenguaje"
-            onChange={handleChange}
-            defaultValue="">
-            <option value="" defaultValue>---</option>
-            <option value="js">Javascript</option>
-            <option value="php">PHP</option>
-            <option value="python">Python</option>
-            <br />
-          </select>
-            <label htmlFor="terminos">Acepto terminos y condiciones</label>
-            <input
-              type = "checkbox"
-              id="terminos"
-              name="terminos"
-              onChange={handleChecked}
-              />
-            <br />
-            <input type="submit" />
+          onChange={handleChange}
+        />
+        <p>Elige tu sabor JS favorito</p>
+        <input
+          type="radio"
+          id="vanilla"
+          name="sabor"
+          value="vanilla"
+          defaultChecked
+          onChange={handleChange}
+        />
+        <label htmlFor="">Vanilla</label>
+        <input
+          type="radio"
+          id="React"
+          name="sabor"
+          value="React"
+          onChange={handleChange}
+        />
+        <label htmlFor="">React</label>
+        <input
+          type="radio"
+          id="Angular"
+          name="sabor"
+          value="Angular"
+          onChange={handleChange}
+        />
+        <label htmlFor="">Angular</label>
+        <select name="lenguaje" onChange={handleChange} defaultValue="">
+          <option value="" defaultValue>
+            ---
+          </option>
+          <option value="js">Javascript</option>
+          <option value="php">PHP</option>
+          <option value="python">Python</option>
+          <br />
+        </select>
+        <label htmlFor="terminos">Acepto terminos y condiciones</label>
+        <input
+          type="checkbox"
+          id="terminos"
+          name="terminos"
+          onChange={handleChecked}
+        />
+        <br />
+        <input type="submit" />
       </form>
     </>
-  )
+  );
 }
