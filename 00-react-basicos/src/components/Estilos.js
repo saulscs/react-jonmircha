@@ -1,7 +1,7 @@
 import React from "react";
 import "./Estilos.css";
-import "./Estilos.scss"
-import moduleStyles from "./Estilos.module.css"
+import "./Estilos.scss";
+import moduleStyles from "./Estilos.module.css";
 
 export default function Estilos() {
   let myStyles = {
