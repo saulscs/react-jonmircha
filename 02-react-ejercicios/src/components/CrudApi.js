@@ -2,36 +2,8 @@ import React, { useState } from "react";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 
-const initialDb = [
-  {
-    id: 1,
-    name: "Seiya",
-    constellation: "Pegaso",
-  },
-  {
-    id: 2,
-    name: "Shiryu",
-    constellation: "Dragón",
-  },
-  {
-    id: 3,
-    name: "Hyoga",
-    constellation: "Cisne",
-  },
-  {
-    id: 4,
-    name: "Shun",
-    constellation: "Andrómeda",
-  },
-  {
-    id: 5,
-    name: "Ikki",
-    constellation: "Fénix",
-  },
-];
-
-const CrudApp = () => {
-  const [db, setDb] = useState(initialDb);
+ const CrudApi = () => {
+  const [db, setDb] = useState([]);
   const [dataToEdit, setDataToEdit] = useState(null);
 
   const createData = (data) => {
@@ -56,10 +28,9 @@ const CrudApp = () => {
       return;
     }
   };
-
   return (
     <div>
-      <h2>CRUD APP MOCK</h2>
+      <h2>Crud API JSON</h2>
       <article className="grid-1-2">
         <CrudForm
           createData={createData}
@@ -74,7 +45,6 @@ const CrudApp = () => {
         />
       </article>
     </div>
-  );
-};
-
-export default CrudApp;
+  )
+}
+export default CrudApi;
