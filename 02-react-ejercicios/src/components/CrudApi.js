@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 
- const CrudApi = () => {
+const CrudApi = () => {
   const [db, setDb] = useState([]);
   const [dataToEdit, setDataToEdit] = useState(null);
 
@@ -45,6 +45,6 @@ import CrudTable from "./CrudTable";
         />
       </article>
     </div>
-  )
-}
+  );
+};
 export default CrudApi;
