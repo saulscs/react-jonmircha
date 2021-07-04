@@ -11,6 +11,7 @@ const SongSearch = () => {
 
   const handleSearch = (data) => {
     console.log(data);
+    setSearch(data);
   };
 
   return (
@@ -18,7 +19,7 @@ const SongSearch = () => {
       <h2>Song Search</h2>
       {loading && <Loader />}
       <SongForm handleSearch={handleSearch} />
-      <SongDetails search={search} lyrics={lyric} bio={bio} />
+      <SongDetails search={search} lyric={lyric} bio={bio} />
     </div>
   );
 };
