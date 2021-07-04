@@ -31,11 +31,11 @@ const CrudApi = () => {
   const createData = (data) => {
     let options = {
       headers: { "content-type": "application/json" },
-      body:data,
+      body: data,
     };
     data.id = Date.now();
-    api.post(url,options).then(res => {
-      if(!res.err){
+    api.post(url, options).then((res) => {
+      if (!res.err) {
         setDb([...db, data]);
       } else {
         setError(res);
@@ -46,12 +46,12 @@ const CrudApi = () => {
   const updateData = (data) => {
     let options = {
       headers: { "content-type": "application/json" },
-      body:data,
+      body: data,
     };
-    let endpoint = `${url}/${data.id}`
-    console.log(endpoint)
-    api.put(endpoint,options).then(res => {
-      if(!res.err){
+    let endpoint = `${url}/${data.id}`;
+    console.log(endpoint);
+    api.put(endpoint, options).then((res) => {
+      if (!res.err) {
         let newData = db.map((el) => (el.id === data.id ? data : el));
         setDb(newData);
       } else {
