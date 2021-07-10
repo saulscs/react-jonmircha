@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
+import Loader from "./Loader";
+import Message from "./Message";
 
 const initialForm = {
   name: "",
@@ -17,13 +19,13 @@ const validationForm = (form) => {
   if (!form.name.trim()) {
     errors.name = "El campo 'Nombre' es requerido";
   } else if (!regexName.test(form.name.trim())) {
-    errors.name = "El campo 'Nombre' solo acepta letras y espacios en blanco"
+    errors.name = "El campo 'Nombre' solo acepta letras y espacios en blanco";
   }
 
   if (!form.email.trim()) {
     errors.email = "El campo 'Email' es requerido";
   } else if (!regexEmail.test(form.email.trim())) {
-    errors.email = "El campo 'Email' es incorrecto"
+    errors.email = "El campo 'Email' es incorrecto";
   }
 
   if (!form.subject.trim()) {
@@ -33,7 +35,8 @@ const validationForm = (form) => {
   if (!form.comments.trim()) {
     errors.comments = "El campo 'Comentarios' es requerido";
   } else if (!regexComments.test(form.comments.trim())) {
-    errors.comments = "El campo 'Comentarios' no debe exceder los 255 caracteres "
+    errors.comments =
+      "El campo 'Comentarios' no debe exceder los 255 caracteres ";
   }
 
   return errors;
@@ -106,6 +109,10 @@ const ContacForm = () => {
 
         <input type="submit" value="Enviar" />
       </form>
+      {loading && <Loader />}
+      {response && (
+        <Message msg="Los datos han sido enviados" bgColor="#198754" />
+      )}
     </div>
   );
 };
