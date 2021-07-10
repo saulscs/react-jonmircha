@@ -29,7 +29,7 @@ export const useForm = (initialForm, validateForm) => {
       alert("Enviando formulario");
       setLoading(true);
       helpHttp()
-        .post("https://formsubmit.co/ajax/saulcoronascs@gmail.com", {
+        .post("https://formsubmit.co/ajax/email@email.com", {
           body: form,
           headers: {
             "Content-Type": "application/json",
