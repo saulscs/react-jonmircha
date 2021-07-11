@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Acerca from "../pages/Acerca";
+import Contacto from "../pages/Contacto";
+
 const ConceptosBasicos = () => {
   return (
     <div>
@@ -10,12 +13,8 @@ const ConceptosBasicos = () => {
           <Route exact path="/">
             <h3>Home</h3>
           </Route>
-          <Route path="/acerca">
-            <h3>Acerca</h3>
-          </Route>
-          <Route path="/contacto">
-            <h3>Contacto</h3>
-          </Route>
+          <Route exact path="/acerca" component={Acerca} />
+          <Route exact path="/contacto" component={Contacto} />
         </Switch>
       </Router>
     </div>
