@@ -27,6 +27,8 @@
 }
 
 .modal-close {
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: 1rem;
   right: 1rem;
