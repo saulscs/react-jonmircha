@@ -24,6 +24,10 @@ const MenuConceptos = () => {
           <NavLink exact to="/acerca" activeClassName="active">Acerca</NavLink>
           <NavLink exact to="/contacto" activeClassName="active">Contacto</NavLink>
         </li>
+        <li>
+          <span>Parametros</span>
+          <NavLink exact to="/usuario/saul">Saul</NavLink>
+        </li>
       </ol>
     </nav>
   );
