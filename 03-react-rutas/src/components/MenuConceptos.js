@@ -28,6 +28,10 @@ const MenuConceptos = () => {
           <span>Parametros</span>
           <NavLink exact to="/usuario/saul">Saul</NavLink>
         </li>
+        <li>
+          <span>Parametros de cosulta</span>
+          <Link to="/productos">Productos</Link>
+        </li>
       </ol>
     </nav>
   );
