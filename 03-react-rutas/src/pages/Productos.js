@@ -17,13 +17,13 @@ const Productos = () => {
   };
 
   const handleNext = (e) => {
-   history.push({search: `?inicio=${start + LIMIT}&fin=${end + LIMIT}`});
+    history.push({search: `?inicio=${start + LIMIT}&fin=${end + LIMIT}`});
   };
 
   return (
     <div>
       <h3>Productos</h3>
-      <p>Mostrando productos del 1 al 20</p>
+      <p>Mostrando productos del <b>{start}</b> al <b>{end}</b> </p>
       {start > LIMIT && <button onClick={handlePrev}>Atras</button>}
       <button onClick={handleNext}>adelante</button>
     </div>
