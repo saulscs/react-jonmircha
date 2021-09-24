@@ -3,13 +3,15 @@ import { useParams } from "react-router";
 const Usuario = () => {
   // let params = useParams();
   // console.log(params);
-  let {username} = useParams();
+  let { username } = useParams();
   return (
     <div>
       <h3>Perfil del usuario</h3>
-      <p>Nombre del usuario <b>{username}</b></p>
+      <p>
+        Nombre del usuario <b>{username}</b>
+      </p>
     </div>
-  )
+  );
 };
 
 export default Usuario;

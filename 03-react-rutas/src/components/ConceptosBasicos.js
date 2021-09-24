@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import Acerca from "../pages/Acerca";
 import Contacto from "../pages/Contacto";
@@ -8,6 +13,7 @@ import Usuario from "../pages/Usuario";
 import Productos from "../pages/Productos";
 import Error404 from "../pages/Error404";
 import MenuConceptos from "../components/MenuConceptos";
+import ReactTopics from "../pages/ReactTopics";
 
 const ConceptosBasicos = () => {
   return (
@@ -22,11 +28,12 @@ const ConceptosBasicos = () => {
           <Route exact path="/usuario/:username" component={Usuario} />
           <Route exact path="/productos" component={Productos} />
           <Route exact path="/about">
-            <Redirect to="/acerca"/>
+            <Redirect to="/acerca" />
           </Route>
           <Route exact path="/contact">
-            <Redirect to="/contacto"/>
+            <Redirect to="/contacto" />
           </Route>
+          <Route path="/reactTopics" component={ReactTopics} />
           <Route path="*" component={Error404} />
         </Switch>
       </Router>

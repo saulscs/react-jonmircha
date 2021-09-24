@@ -20,13 +20,21 @@ const MenuConceptos = () => {
         </li>
         <li>
           <span>Componente NavLink</span>
-          <NavLink exact to="/" activeClassName="active">Home</NavLink>
-          <NavLink exact to="/acerca" activeClassName="active">Acerca</NavLink>
-          <NavLink exact to="/contacto" activeClassName="active">Contacto</NavLink>
+          <NavLink exact to="/" activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink exact to="/acerca" activeClassName="active">
+            Acerca
+          </NavLink>
+          <NavLink exact to="/contacto" activeClassName="active">
+            Contacto
+          </NavLink>
         </li>
         <li>
           <span>Parametros</span>
-          <NavLink exact to="/usuario/saul">Saul</NavLink>
+          <NavLink exact to="/usuario/saul">
+            Saul
+          </NavLink>
         </li>
         <li>
           <span>Parametros de cosulta</span>
@@ -36,6 +44,10 @@ const MenuConceptos = () => {
           <span>Redirecciones</span>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <span>Rutas anidadas: </span>
+          <Link to="/reactTopics">React</Link>
         </li>
       </ol>
     </nav>
