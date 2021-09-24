@@ -14,6 +14,9 @@ import Productos from "../pages/Productos";
 import Error404 from "../pages/Error404";
 import MenuConceptos from "../components/MenuConceptos";
 import ReactTopics from "../pages/ReactTopics";
+import Dashboard from "../pages/Dashboard";
+import Login from "../pages/Login";
+import PrivateRoute from "../components/PrivateRoute";
 
 const ConceptosBasicos = () => {
   return (
@@ -34,6 +37,8 @@ const ConceptosBasicos = () => {
             <Redirect to="/contacto" />
           </Route>
           <Route path="/reactTopics" component={ReactTopics} />
+          <Route exact path="/login" component={Login} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard}/>
           <Route path="*" component={Error404} />
         </Switch>
       </Router>
