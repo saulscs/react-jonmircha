@@ -48,12 +48,22 @@
     {
       "id": 1625270973494,
       "name": "Saul Corona Santos",
-      "constellation": "acurario"
+      "constellation": "Acuario"
     },
     {
-      "id": 1701742540063,
+      "id": 1701743648393,
       "name": "Camus",
       "constellation": "Acuario"
+    },
+    {
+      "id": 1701744886714,
+      "name": "Leo",
+      "constellation": "Leos"
+    },
+    {
+      "id": 1701746049934,
+      "name": "Afrodita",
+      "constellation": "Piscis"
     }
   ]
 }
