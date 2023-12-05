@@ -1,9 +1,10 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Switch,
   Redirect,
+  Link,
 } from "react-router-dom";
 
 import Acerca from "../pages/Acerca";
@@ -17,10 +18,24 @@ import ReactTopics from "../pages/ReactTopics";
 import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/PrivateRoute";
+import { HashRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 const ConceptosBasicos = () => {
   return (
     <div>
+      <h2>HashRouter</h2>
+      <HashRouter>
+        <nav>
+          <Link to ="/">Home</Link>
+          <Link to ="/acerca">Acerca</Link>
+          <Link to ="/contacto">Contacto</Link>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/acerca" component={Acerca} />
+            <Route exact path="/contacto" component={Contacto} />
+          </Switch>
+        </nav>
+      </HashRouter>
       <h2>Conceptos Basicos</h2>
       <Router>
         <MenuConceptos />
