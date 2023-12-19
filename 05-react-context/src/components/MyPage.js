@@ -6,6 +6,8 @@ import Footer from "./Footer";
 const initialTheme = "light";
 const initialLanguage = "es";
 
+const initialAuth = null;
+
 const translations = {
     es: {
         headerTitle: "Mi aplicación SIN Context API",
@@ -37,6 +39,7 @@ const MyPage = () => {
     const [theme, setTheme] = useState(initialTheme);
     const [lenguage, setLenguage] = useState(initialLanguage);
     const [text, setText] = useState(translations[lenguage]);
+    const [auth, setAuth] = useState(initialAuth);
 
     const handleTheme = (e) => {
         if(e.target.value === "light") {
@@ -56,15 +59,25 @@ const MyPage = () => {
         }
     };
 
+    const handleAuth = (e) => {
+        if(auth){
+            setAuth(null);
+        } else {
+            setAuth(true);
+        }
+    };
+
     return (
         <div className="my-page">
             <Header 
                 theme={theme}
                 text={text}
+                auth={auth}
                 handleTheme={handleTheme}
                 handleLanguage={handleLanguage}
+                handleAuth={handleAuth}
             />
-            <Main theme={theme} text={text}/>
+            <Main theme={theme} text={text} auth={auth}/>
             <Footer theme={theme} text={text}/>
         </div>
     )

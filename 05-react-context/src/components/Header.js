@@ -1,4 +1,4 @@
-const Header = ({theme, text, handleTheme, handleLanguage}) => {
+const Header = ({theme, text, auth, handleTheme, handleLanguage, handleAuth}) => {
     const { headerTitle, headerSubtitle, headerLight, headerDark, buttonLogin, buttonLogout} = text;
 
     return (
@@ -25,7 +25,9 @@ const Header = ({theme, text, handleTheme, handleLanguage}) => {
                 onClick={handleTheme}
             />
             <label htmlFor="dark">{headerDark}</label>
-            <button>{buttonLogin}{buttonLogout}</button>
+            <button onClick={handleAuth}>
+                {auth ?  buttonLogout :  buttonLogin}
+            </button>
         </header>
     );
 };
